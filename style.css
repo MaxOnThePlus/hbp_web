@@ -850,6 +850,10 @@ footer {
     background: #929292;
     padding-top: 31px;
     padding-bottom: 31px;
+    
+}
+
+.footer_upper {
     display: flex;
     justify-content: space-around;
 }
@@ -876,6 +880,19 @@ footer {
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.imp_sup {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.important_support {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
     line-height: 20px;
     color: #FFFFFF;
 }
