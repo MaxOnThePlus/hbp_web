@@ -1,4 +1,81 @@
 const surveyOpenButton = document.querySelector('.hbp_risk_button');
+async function submitButton(){
+    let data = {
+        'priem': document.getElementById('priem').value,
+        'debjut_v_vozraste': document.getElementById('debjut_v_vozraste').value,
+        'vozrast_gruppa_debjut': document.getElementById('vozrast_gruppa_debjut').value,
+        'dz': document.getElementById('dz').value,
+        'pol': document.getElementById('pol').value,
+        'vozrast_gruppy': document.getElementById('vozrast_gruppy').value,
+        'tr_v_den': document.getElementById('tr_v_den').value,
+        'trpenia_debjut': document.getElementById('trpenia_debjut').value,
+        'dlit_trpenii': document.getElementById('dlit_trpenii').value,
+        'nv_v_den': document.getElementById('nv_v_den').value,
+        'er_v_den': document.getElementById('er_v_den').value,
+        'ley_v_den': document.getElementById('ley_v_den').value,
+        'kr_v_den': document.getElementById('kr_v_den').value,
+        'kr_max': document.getElementById('kr_max').value,
+        'skf_v_den': document.getElementById('skf_v_den').value,
+        'skf_min': document.getElementById('skf_min').value,
+        'dlit_skf': document.getElementById('dlit_skf').value,
+        'mochevina_v_den': document.getElementById('mochevina_v_den').value,
+        'mochevina_max': document.getElementById('mochevina_max').value,
+        'alt_v_den': document.getElementById('alt_v_den').value,
+        'alt_v_max': document.getElementById('alt_v_max').value,
+        'ast_v_den': document.getElementById('ast_v_den').value,
+        'ast_max': document.getElementById('ast_max').value,
+        'ldg_v_den': document.getElementById('ldg_v_den').value,
+        'ldg_max': document.getElementById('ldg_max').value,
+        'ob_v_den': document.getElementById('ob_v_den').value,
+        'soe_max': document.getElementById('soe_max').value,
+        'soe_v_den': document.getElementById('soe_v_den').value,
+        'srb_max': document.getElementById('srb_max').value,
+        'srb_v_den': document.getElementById('srb_v_den').value,
+        'c3_min': document.getElementById('c3_min').value,
+        'c4_min': document.getElementById('c4_min').value,
+        'gaptoglobin_min': document.getElementById('gaptoglobin_min').value,
+        'cns': document.getElementById('cns').value,
+        'porazhenie_cns': document.getElementById('porazhenie_cns').value,
+        'porazhenie_serdca': document.getElementById('porazhenie_serdca').value,
+        'echo_ks': document.getElementById('echo_ks').value,
+        'chls': document.getElementById('chls').value,
+        'parenhima_pochek': document.getElementById('parenhima_pochek').value,
+        'debjut_zabolevaniya': document.getElementById('debjut_zabolevaniya').value,
+        'gemokolit': document.getElementById('gemokolit').value,
+        'diareya': document.getElementById('diareya').value,
+        'temperature': document.getElementById('temperature').value,
+        'rvota': document.getElementById('rvota').value,
+        'ag': document.getElementById('ag').value,
+        'sad': document.getElementById('sad').value,
+        'dad': document.getElementById('dad').value,
+        'jkt': document.getElementById('jkt').value,
+        'pechen': document.getElementById('pechen').value,
+        'sut_belok_max': document.getElementById('sut_belok_max').value,
+        'protenuria_dan': document.getElementById('protenuria_dan').value,
+        'gematury': document.getElementById('gematury').value,
+        'gematury_dney': document.getElementById('gematury_dney').value,
+        'leykocituria': document.getElementById('leykocituria').value,
+        'leykuria_dney': document.getElementById('leykuria_dney').value,
+        'narushenie_mochespuskania': document.getElementById('narushenie_mochespuskania').value,
+        'olig_anuria_dney': document.getElementById('olig_anuria_dney').value,
+        'ekulizymab': document.getElementById('ekulizymab').value,
+        'dlit_OPP': document.getElementById('dlit_OPP').value,
+        'peritonealny': document.getElementById('peritonealny').value,
+        'gemodializ': document.getElementById('gemodializ').value,
+        'giuk5': document.getElementById('giuk5').value,
+        'NT5VPlazme': document.getElementById('NT5VPlazme').value
+    }
+    const body = JSON.stringify(data);
+    let response = await fetch('http://127.0.0.1:5000/get-result/', {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: 'POST',
+        body: body
+    });
+    document.getElementById('response').innerHTML = await response.json();
+}
 const bodyForSurvey = document.querySelector('body');
 // const formOpenButton = document.querySelector('.connect__bottom');
 surveyOpenButton.addEventListener("click", (e)=>{
@@ -18,74 +95,418 @@ surveyOpenButton.addEventListener("click", (e)=>{
                       <div>
                       <p><span class="green_text">1/</span>Возраст пациента</p>
                       <div class="age_variants">
-                        <div class="age_variant">
-                        <input type="radio" id="age_1"
-                        name="age" class="radio_button" value="up-to-year" checked>
-                        <label for="age_1">до 1 года</label>
-                        </div>
-                        <div class="age_variant">
-                        <input type="radio" id="age_2"
-                        name="age" class="radio_button" value="from-one-to-three">
-                        <label for="age_2">от 1 до 3 лет</label>
-                        </div>
-                        <div class="age_variant">
-                        <input type="radio" id="age_3"
-                        name="age" class="radio_button" value="from-three-to-five">
-                        <label for="age_3">от 3 до 5 лет</label>
-                      </div>
-                      <div class="age_variant">
-                        <input type="radio" id="age_4"
-                        name="age" class="radio_button" value="older-than-one">
-                        <label for="age_4">старше 5 лет</label>
+                        <div class="age_variants">
+                        <select name=vozrast_gruppy id="vozrast_gruppy"/>
+                          <option value=0>До года</option>
+                          <option value=1>От 1 до 3 лет</option>
+                          <option value=2>От трех до 5 лет</option>
+                          <option value=3>Старше 5 лет</option>
+                        </select>
                       </div>
                       </div>
                     </div>
+                    
                     <div>
-                      <p><span class="green_text">2/</span>Диагноз</p>
+                      <p><span class="green_text">2/</span>Прием</p>
+                      <div class="age_variants_priem">
+                        <div class="age_variants_priem">
+                        <select name=priem id="priem"/>
+                          <option value=0>До года</option>
+                          <option value=1>От 1 до 3 лет</option>
+                          <option value=2>От трех до 5 лет</option>
+                          <option value=3>Старше 5 лет</option>
+                        </select>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">3/</span>Дебют в возрасте</p>
+                      <div class="age_debyut">
+                        <div class="age_debyut">
+                            <input type='number' placeholder="Введите ответ" id="debjut_v_vozraste" min="0"/>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">4/</span>Возрастная группа дебют</p>
+                      <div class="age_variants">
+                        <div class="age_variants">
+                        <select name=vozrast_gruppa_debjut id="vozrast_gruppa_debjut"/>
+                          <option value=0>До года</option>
+                          <option value=1>От 1 до 3 лет</option>
+                          <option value=2>От трех до 5 лет</option>
+                          <option value=3>Старше 5 лет</option>
+                        </select>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">5/</span>Диагноз</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variant">
-                        <input type="radio" id="gus"
-                        name="diagnosis" class="radio_button" value="gus" checked>
-                        <label for="gus">ГУС</label><br>
-                      </div>
-                      <div class="diagnosis_variant">
-                        <input type="radio" id="a-gus"
-                        name="diagnosis" class="radio_button" value="a-gus">
-                        <label for="a-gus">аГУС</label>
-                      </div>
+                        <select name=dz id="dz"/>
+                          <option value='ГУС'>ГУС</option>
+                          <option value='аГУС'>аГУС</option>
+                        </select>
                       </div>
                     </div>
-                      <div class="survey_el">
-                        <label for="trombocytes" class="question"><span class="green_text">3/</span>Уровень тромбоцитов в крови</label><br>
-                  <input type="text" class="question_answer" id="trombocytes" placeholder="Введите ответ">
+                    
+                    <div>
+                      <p><span class="green_text">6/</span>Пол</p>
+                      <div class="age_variants">
+                        <div class="age_variants">
+                        <select name="pol" id="pol"/>
+                          <option value='Мальчик'>Мальчик</option>
+                          <option value='Девочка'>Девочка</option>
+                        </select>
                       </div>
+                    </div>
+                    
                       <div class="survey_el">
-                        <label for="hemoglobin" class="question"><span class="green_text">4/</span>Уровень гемоглобина в крови</label><br>
-                  <input type="text" class="question_answer" id="hemoglobin" placeholder="Введите ответ">
+                        <label for="tr_v_den" class="question"><span class="green_text">3/</span>Уровень тромбоцитов в крови</label><br>
+                        <input type="text" class="question_answer" id="tr_v_den" placeholder="Введите ответ">
                       </div>
                       
+                      <div class="survey_el">
+                        <label for="trpenia_debjut" class="question"><span class="green_text">3/</span>trpenia_debjut</label><br>
+                        <input type="text" class="question_answer" id="trpenia_debjut" placeholder="Введите ответ">
+                      </div>
+                      
+                      
+                      <div class="survey_el">
+                        <label for="dlit_trpenii" class="question"><span class="green_text">3/</span>dlit_trpenii</label><br>
+                        <input type="text" class="question_answer" id="dlit_trpenii" placeholder="Введите ответ">
+                      </div>
+                      
+                      <div class="survey_el">
+                        <label for="nv_v_den" class="question"><span class="green_text">3/</span>nv_v_den</label><br>
+                        <input type="text" class="question_answer" id="nv_v_den" placeholder="Введите ответ">
+                      </div>
+                      
+                      <div class="survey_el">
+                        <label for="er_v_den" class="question"><span class="green_text">3/</span>er_v_den</label><br>
+                        <input type="text" class="question_answer" id="er_v_den" placeholder="Введите ответ">
+                      </div>
+                      
+                      <div class="survey_el">
+                        <label for="ley_v_den" class="question"><span class="green_text">3/</span>ley_v_den</label><br>
+                        <input type="text" class="question_answer" id="ley_v_den" placeholder="Введите ответ">
+                      </div>
+                      
+                      <div class="survey_el">
+                        <label for="kr_v_den" class="question"><span class="green_text">3/</span>kr_v_den</label><br>
+                        <input type="text" class="question_answer" id="kr_v_den" placeholder="Введите ответ">
+                      </div>
+                       
+                      <div class="survey_el">
+                        <label for="kr_max" class="question"><span class="green_text">3/</span>kr_max</label><br>
+                        <input type="text" class="question_answer" id="kr_max" placeholder="Введите ответ">
+                      </div>
+                        
+                      <div class="survey_el">
+                        <label for="skf_v_den" class="question"><span class="green_text">3/</span>skf_v_den</label><br>
+                        <input type="text" class="question_answer" id="skf_v_den" placeholder="Введите ответ">
+                      </div>
+                        
+                      <div class="survey_el">
+                        <label for="skf_min" class="question"><span class="green_text">3/</span>skf_min</label><br>
+                        <input type="text" class="question_answer" id="skf_min" placeholder="Введите ответ">
+                      </div>
+                         
+                      <div class="survey_el">
+                        <label for="dlit_skf" class="question"><span class="green_text">3/</span>dlit_skf</label><br>
+                        <input type="text" class="question_answer" id="dlit_skf" placeholder="Введите ответ">
+                      </div>
+                         
+                      <div class="survey_el">
+                        <label for="mochevina_v_den" class="question"><span class="green_text">3/</span>mochevina_v_den</label><br>
+                        <input type="text" class="question_answer" id="mochevina_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="mochevina_max" class="question"><span class="green_text">3/</span>mochevina_max</label><br>
+                        <input type="text" class="question_answer" id="mochevina_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="mochevina_max" class="question"><span class="green_text">3/</span>mochevina_max</label><br>
+                        <input type="text" class="question_answer" id="mochevina_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="alt_v_den" class="question"><span class="green_text">3/</span>alt_v_den</label><br>
+                        <input type="text" class="question_answer" id="alt_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="alt_v_max" class="question"><span class="green_text">3/</span>alt_v_max</label><br>
+                        <input type="text" class="question_answer" id="alt_v_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="ast_v_den" class="question"><span class="green_text">3/</span>ast_v_den</label><br>
+                        <input type="text" class="question_answer" id="ast_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="ast_max" class="question"><span class="green_text">3/</span>ast_max</label><br>
+                        <input type="text" class="question_answer" id="ast_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="ldg_v_den" class="question"><span class="green_text">3/</span>ldg_v_den</label><br>
+                        <input type="text" class="question_answer" id="ldg_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="ldg_max" class="question"><span class="green_text">3/</span>ldg_max</label><br>
+                        <input type="text" class="question_answer" id="ldg_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="ob_v_den" class="question"><span class="green_text">3/</span>ob_v_den</label><br>
+                        <input type="text" class="question_answer" id="ob_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="soe_max" class="question"><span class="green_text">3/</span>soe_max</label><br>
+                        <input type="text" class="question_answer" id="soe_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="soe_v_den" class="question"><span class="green_text">3/</span>soe_v_den</label><br>
+                        <input type="text" class="question_answer" id="soe_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="srb_max" class="question"><span class="green_text">3/</span>srb_max</label><br>
+                        <input type="text" class="question_answer" id="srb_max" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="srb_v_den" class="question"><span class="green_text">3/</span>srb_v_den</label><br>
+                        <input type="text" class="question_answer" id="srb_v_den" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="c3_min" class="question"><span class="green_text">3/</span>c3_min</label><br>
+                        <input type="text" class="question_answer" id="c3_min" placeholder="Введите ответ">
+                      </div>
+                          
+                      <div class="survey_el">
+                        <label for="c4_min" class="question"><span class="green_text">3/</span>c4_min</label><br>
+                        <input type="text" class="question_answer" id="c4_min" placeholder="Введите ответ">
+                      </div>  
+                        
+                      <div class="survey_el">
+                        <label for="gaptoglobin_min" class="question"><span class="green_text">3/</span>gaptoglobin_min</label><br>
+                        <input type="text" class="question_answer" id="gaptoglobin_min" placeholder="Введите ответ">
+                      </div>
+                      
+                      <div>
+                      <p><span class="green_text">5/</span>ЦНС</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=cns id="cns"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                       
+                      <div>
+                      <p><span class="green_text">5/</span>поражение ЦНС</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=porazhenie_cns id="porazhenie_cns"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                       
+                      <div>
+                      <p><span class="green_text">5/</span>поражение сердца</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=porazhenie_serdca id="porazhenie_serdca"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                      
                     <div class="survey_el">
-                      <label for="creatinine" class="question"><span class="green_text">5/</span>Уровень креатинина в крови</label><br>
-                <input type="text" class="question_answer" id="creatinine" placeholder="Введите ответ">
+                        <label for="echo_ks" class="question"><span class="green_text">3/</span>echo_ks</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="echo_ks" min="0" step="1" max="9"/>
                     </div>
+                         
                     <div class="survey_el">
-                      <label for="urea" class="question"><span class="green_text">6/</span>Уровень мочевины в крови</label><br>
-                <input type="text" class="question_answer" id="urea" placeholder="Введите ответ">
+                        <label for="chls" class="question"><span class="green_text">3/</span>chls</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="chls" min="0" step="1" max="2"/>
                     </div>
+                           
                     <div class="survey_el">
-                      <label for="serum_serotonin" class="question"><span class="green_text">7/</span>Уровень серотонина в плазме крови</label><br>
-                <input type="text" class="question_answer" id="serum_serotonin" placeholder="Введите ответ">
+                        <label for="parenhima_pochek" class="question"><span class="green_text">3/</span>parenhima_pochek</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="parenhima_pochek" min="0" step="1" max="2"/>
                     </div>
+                             
                     <div class="survey_el">
-                      <label for="plasma_serototnin" class="question"><span class="green_text">8/</span>Уровень серотонина в плазме обогащенной тромбоцитами</label><br>
-                <input type="text" class="question_answer" id="plasma_serototnin" placeholder="Введите ответ">
+                        <label for="debjut_zabolevaniya" class="question"><span class="green_text">3/</span>debjut_zabolevaniya</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="debjut_zabolevaniya" min="0" step="1" max="2"/>
                     </div>
+                         
+                    <div>
+                      <p><span class="green_text">5/</span>gemokolit</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=gemokolit id="gemokolit"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                               
                     <div class="survey_el">
-                      <label for="giuk" class="question"><span class="green_text">9/</span>Уровень  5-ГИУК в сыворотке крови</label><br>
-                <input type="text" class="question_answer" id="giuk" placeholder="Введите ответ">
+                        <label for="diareya" class="question"><span class="green_text">3/</span>diareya</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="diareya" min="0" step="1" max="2"/>
                     </div>
-                    <button type="submit" class="survey_submit">Получить расшифровку</button>
+                    
+                    <div class="survey_el">
+                        <label for="temperature" class="question"><span class="green_text">3/</span>temperature</label><br>
+                        <input type="text" class="question_answer" id="temperature" placeholder="Введите ответ">
                     </div>
+                       
+                    <div class="survey_el">
+                        <label for="rvota" class="question"><span class="green_text">3/</span>rvota</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="rvota" min="0" step="1" max="2"/>
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">5/</span>ag</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=ag id="ag"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="sad" class="question"><span class="green_text">3/</span>sad</label><br>
+                        <input type="text" class="question_answer" id="sad" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="dad" class="question"><span class="green_text">3/</span>dad</label><br>
+                        <input type="text" class="question_answer" id="dad" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="jkt" class="question"><span class="green_text">3/</span>jkt</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="jkt" min="0" step="1" max="8"/>
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="pechen" class="question"><span class="green_text">3/</span>pechen</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="pechen" min="0" step="2" max="8"/>
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="sut_belok_max" class="question"><span class="green_text">3/</span>sut_belok_max</label><br>
+                        <input type="text" class="question_answer" id="sut_belok_max" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="protenuria_dan" class="question"><span class="green_text">3/</span>protenuria_dan</label><br>
+                        <input type="text" class="question_answer" id="protenuria_dan" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="gematury" class="question"><span class="green_text">3/</span>gematury</label><br>
+                        <input type="text" class="question_answer" id="gematury" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="gematury_dney" class="question"><span class="green_text">3/</span>gematury_dney</label><br>
+                        <input type="text" class="question_answer" id="gematury_dney" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="leykocituria" class="question"><span class="green_text">3/</span>leykocituria</label><br>
+                        <input type="text" class="question_answer" id="leykocituria" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="leykuria_dney" class="question"><span class="green_text">3/</span>leykuria_dney</label><br>
+                        <input type="text" class="question_answer" id="leykuria_dney" placeholder="Введите ответ">
+                    </div>
+                     
+                     <div class="survey_el">
+                        <label for="narushenie_mochespuskania" class="question"><span class="green_text">3/</span>narushenie_mochespuskania</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="narushenie_mochespuskania" min="0" step="1" max="2"/>
+                     </div>
+                     
+                    <div class="survey_el">
+                        <label for="olig_anuria_dney" class="question"><span class="green_text">3/</span>olig_anuria_dney</label><br>
+                        <input type="text" class="question_answer" id="olig_anuria_dney" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="ekulizymab" class="question"><span class="green_text">3/</span>ekulizymab</label><br>
+                        <input type='number' class="question_answer" placeholder="Введите ответ" id="ekulizymab" min="0" step="1" max="7"/>
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="dlit_OPP" class="question"><span class="green_text">3/</span>dlit_OPP</label><br>
+                        <input type="text" class="question_answer" id="dlit_OPP" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">5/</span>peritonealny</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=peritonealny id="peritonealny"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <p><span class="green_text">5/</span>gemodializ</p>
+                      <div class="diagnosis_variants">
+                        <div class="diagnosis_variants">
+                        <select name=gemodializ id="gemodializ"/>
+                          <option value=0>Нет</option>
+                          <option value=1>Да</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="survey_el">
+                        <label for="giuk5" class="question"><span class="green_text">3/</span>giuk5</label><br>
+                        <input type="text" class="question_answer" id="giuk5" placeholder="Введите ответ">
+                    </div>
+                     
+                    <div class="survey_el">
+                        <label for="NT5VPlazme" class="question"><span class="green_text">3/</span>NT5VPlazme</label><br>
+                        <input type="text" class="question_answer" id="NT5VPlazme" placeholder="Введите ответ">
+                    </div>
+                    
+                    </div>
+                        <button type="submit" class="survey_submit" onclick="submitButton()">Получить расшифровку</button>
+                    </div>
+                    
+                    <div>
+                        <label for="response"> Вероятность болезни: </label><br/>
+                        <fieldset id='response'></fieldset><br/>
+                    </div>
+                    
                   </div>
         </div>
     </div>
