@@ -166,148 +166,143 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                     
                       <div class="survey_el">
-                        <label for="tr_v_den" class="question"><span class="green_text">3/</span>Уровень тромбоцитов в крови</label><br>
+                        <label for="tr_v_den" class="question"><span class="green_text">7/</span>Уровень тромбоцитов в крови</label><br>
                         <input type="text" class="question_answer" id="tr_v_den" placeholder="Введите ответ">
                       </div>
                       
                       <div class="survey_el">
-                        <label for="trpenia_debjut" class="question"><span class="green_text">3/</span>trpenia_debjut</label><br>
+                        <label for="trpenia_debjut" class="question"><span class="green_text">8/</span>Трпения дебют</label><br>
                         <input type="text" class="question_answer" id="trpenia_debjut" placeholder="Введите ответ">
                       </div>
                       
                       
                       <div class="survey_el">
-                        <label for="dlit_trpenii" class="question"><span class="green_text">3/</span>dlit_trpenii</label><br>
+                        <label for="dlit_trpenii" class="question"><span class="green_text">9/</span>Длительность трпении</label><br>
                         <input type="text" class="question_answer" id="dlit_trpenii" placeholder="Введите ответ">
                       </div>
                       
                       <div class="survey_el">
-                        <label for="nv_v_den" class="question"><span class="green_text">3/</span>nv_v_den</label><br>
+                        <label for="nv_v_den" class="question"><span class="green_text">10/</span>Нв в день</label><br>
                         <input type="text" class="question_answer" id="nv_v_den" placeholder="Введите ответ">
                       </div>
                       
                       <div class="survey_el">
-                        <label for="er_v_den" class="question"><span class="green_text">3/</span>er_v_den</label><br>
+                        <label for="er_v_den" class="question"><span class="green_text">11/</span>Уровень эритроцитов в крови</label><br>
                         <input type="text" class="question_answer" id="er_v_den" placeholder="Введите ответ">
                       </div>
                       
                       <div class="survey_el">
-                        <label for="ley_v_den" class="question"><span class="green_text">3/</span>ley_v_den</label><br>
+                        <label for="ley_v_den" class="question"><span class="green_text">12/</span>Уровень лейкоцитов в крови</label><br>
                         <input type="text" class="question_answer" id="ley_v_den" placeholder="Введите ответ">
                       </div>
                       
                       <div class="survey_el">
-                        <label for="kr_v_den" class="question"><span class="green_text">3/</span>kr_v_den</label><br>
+                        <label for="kr_v_den" class="question"><span class="green_text">13/</span>Кр в крови</label><br>
                         <input type="text" class="question_answer" id="kr_v_den" placeholder="Введите ответ">
                       </div>
                        
                       <div class="survey_el">
-                        <label for="kr_max" class="question"><span class="green_text">3/</span>kr_max</label><br>
+                        <label for="kr_max" class="question"><span class="green_text">14/</span>Максимум кр</label><br>
                         <input type="text" class="question_answer" id="kr_max" placeholder="Введите ответ">
                       </div>
                         
                       <div class="survey_el">
-                        <label for="skf_v_den" class="question"><span class="green_text">3/</span>skf_v_den</label><br>
+                        <label for="skf_v_den" class="question"><span class="green_text">15/</span>Скф в крови</label><br>
                         <input type="text" class="question_answer" id="skf_v_den" placeholder="Введите ответ">
                       </div>
                         
                       <div class="survey_el">
-                        <label for="skf_min" class="question"><span class="green_text">3/</span>skf_min</label><br>
+                        <label for="skf_min" class="question"><span class="green_text">16/</span>Минимум скф</label><br>
                         <input type="text" class="question_answer" id="skf_min" placeholder="Введите ответ">
                       </div>
                          
                       <div class="survey_el">
-                        <label for="dlit_skf" class="question"><span class="green_text">3/</span>dlit_skf</label><br>
+                        <label for="dlit_skf" class="question"><span class="green_text">17/</span>Длительность скф</label><br>
                         <input type="text" class="question_answer" id="dlit_skf" placeholder="Введите ответ">
                       </div>
                          
                       <div class="survey_el">
-                        <label for="mochevina_v_den" class="question"><span class="green_text">3/</span>mochevina_v_den</label><br>
+                        <label for="mochevina_v_den" class="question"><span class="green_text">18/</span>Мочевина в крови</label><br>
                         <input type="text" class="question_answer" id="mochevina_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="mochevina_max" class="question"><span class="green_text">3/</span>mochevina_max</label><br>
+                        <label for="mochevina_max" class="question"><span class="green_text">19/</span>Максимум мочевины</label><br>
                         <input type="text" class="question_answer" id="mochevina_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="mochevina_max" class="question"><span class="green_text">3/</span>mochevina_max</label><br>
-                        <input type="text" class="question_answer" id="mochevina_max" placeholder="Введите ответ">
-                      </div>
-                          
-                      <div class="survey_el">
-                        <label for="alt_v_den" class="question"><span class="green_text">3/</span>alt_v_den</label><br>
+                        <label for="alt_v_den" class="question"><span class="green_text">20/</span>АЛТ в крови</label><br>
                         <input type="text" class="question_answer" id="alt_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="alt_v_max" class="question"><span class="green_text">3/</span>alt_v_max</label><br>
+                        <label for="alt_v_max" class="question"><span class="green_text">21/</span>Максимум АЛТ</label><br>
                         <input type="text" class="question_answer" id="alt_v_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="ast_v_den" class="question"><span class="green_text">3/</span>ast_v_den</label><br>
+                        <label for="ast_v_den" class="question"><span class="green_text">22/</span>АСТ в крови</label><br>
                         <input type="text" class="question_answer" id="ast_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="ast_max" class="question"><span class="green_text">3/</span>ast_max</label><br>
+                        <label for="ast_max" class="question"><span class="green_text">23/</span>Максимум АСТ</label><br>
                         <input type="text" class="question_answer" id="ast_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="ldg_v_den" class="question"><span class="green_text">3/</span>ldg_v_den</label><br>
+                        <label for="ldg_v_den" class="question"><span class="green_text">24/</span>ЛДГ в крови</label><br>
                         <input type="text" class="question_answer" id="ldg_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="ldg_max" class="question"><span class="green_text">3/</span>ldg_max</label><br>
+                        <label for="ldg_max" class="question"><span class="green_text">25/</span>Максимум ЛДГ</label><br>
                         <input type="text" class="question_answer" id="ldg_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="ob_v_den" class="question"><span class="green_text">3/</span>ob_v_den</label><br>
+                        <label for="ob_v_den" class="question"><span class="green_text">26/</span>ОБ в крови</label><br>
                         <input type="text" class="question_answer" id="ob_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="soe_max" class="question"><span class="green_text">3/</span>soe_max</label><br>
+                        <label for="soe_max" class="question"><span class="green_text">27/</span>Макс СОЭ</label><br>
                         <input type="text" class="question_answer" id="soe_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="soe_v_den" class="question"><span class="green_text">3/</span>soe_v_den</label><br>
+                        <label for="soe_v_den" class="question"><span class="green_text">28/</span>СОЭ в крови</label><br>
                         <input type="text" class="question_answer" id="soe_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="srb_max" class="question"><span class="green_text">3/</span>srb_max</label><br>
+                        <label for="srb_max" class="question"><span class="green_text">29/</span>Максимум СРБ</label><br>
                         <input type="text" class="question_answer" id="srb_max" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="srb_v_den" class="question"><span class="green_text">3/</span>srb_v_den</label><br>
+                        <label for="srb_v_den" class="question"><span class="green_text">30/</span>СРБ в крови</label><br>
                         <input type="text" class="question_answer" id="srb_v_den" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="c3_min" class="question"><span class="green_text">3/</span>c3_min</label><br>
+                        <label for="c3_min" class="question"><span class="green_text">31/</span>Минимум C3</label><br>
                         <input type="text" class="question_answer" id="c3_min" placeholder="Введите ответ">
                       </div>
                           
                       <div class="survey_el">
-                        <label for="c4_min" class="question"><span class="green_text">3/</span>c4_min</label><br>
+                        <label for="c4_min" class="question"><span class="green_text">32/</span>Минимум С4</label><br>
                         <input type="text" class="question_answer" id="c4_min" placeholder="Введите ответ">
                       </div>  
                         
                       <div class="survey_el">
-                        <label for="gaptoglobin_min" class="question"><span class="green_text">3/</span>gaptoglobin_min</label><br>
+                        <label for="gaptoglobin_min" class="question"><span class="green_text">33/</span>Минимум гаптоглобина</label><br>
                         <input type="text" class="question_answer" id="gaptoglobin_min" placeholder="Введите ответ">
                       </div>
                       
                       <div>
-                      <p><span class="green_text">5/</span>ЦНС</p>
+                      <p><span class="green_text">34/</span>ЦНС</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=cns id="cns"/>
@@ -318,7 +313,7 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                        
                       <div>
-                      <p><span class="green_text">5/</span>поражение ЦНС</p>
+                      <p><span class="green_text">35/</span>Поражение ЦНС</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=porazhenie_cns id="porazhenie_cns"/>
@@ -329,7 +324,7 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                        
                       <div>
-                      <p><span class="green_text">5/</span>поражение сердца</p>
+                      <p><span class="green_text">36/</span>Поражение сердца</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=porazhenie_serdca id="porazhenie_serdca"/>
@@ -340,27 +335,27 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                       
                     <div class="survey_el">
-                        <label for="echo_ks" class="question"><span class="green_text">3/</span>echo_ks</label><br>
+                        <label for="echo_ks" class="question"><span class="green_text">37/</span>Эхо КС</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="echo_ks" min="0" step="1" max="9"/>
                     </div>
                          
                     <div class="survey_el">
-                        <label for="chls" class="question"><span class="green_text">3/</span>chls</label><br>
+                        <label for="chls" class="question"><span class="green_text">38/</span>ЧЛС</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="chls" min="0" step="1" max="2"/>
                     </div>
                            
                     <div class="survey_el">
-                        <label for="parenhima_pochek" class="question"><span class="green_text">3/</span>parenhima_pochek</label><br>
+                        <label for="parenhima_pochek" class="question"><span class="green_text">39/</span>Перенхима почек</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="parenhima_pochek" min="0" step="1" max="2"/>
                     </div>
                              
                     <div class="survey_el">
-                        <label for="debjut_zabolevaniya" class="question"><span class="green_text">3/</span>debjut_zabolevaniya</label><br>
+                        <label for="debjut_zabolevaniya" class="question"><span class="green_text">40/</span>Дебют заболевания</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="debjut_zabolevaniya" min="0" step="1" max="2"/>
                     </div>
                          
                     <div>
-                      <p><span class="green_text">5/</span>gemokolit</p>
+                      <p><span class="green_text">41/</span>Гемоколит</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=gemokolit id="gemokolit"/>
@@ -371,22 +366,22 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                                
                     <div class="survey_el">
-                        <label for="diareya" class="question"><span class="green_text">3/</span>diareya</label><br>
+                        <label for="diareya" class="question"><span class="green_text">42/</span>Диарея</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="diareya" min="0" step="1" max="2"/>
                     </div>
                     
                     <div class="survey_el">
-                        <label for="temperature" class="question"><span class="green_text">3/</span>temperature</label><br>
+                        <label for="temperature" class="question"><span class="green_text">43/</span>Температура</label><br>
                         <input type="text" class="question_answer" id="temperature" placeholder="Введите ответ">
                     </div>
                        
                     <div class="survey_el">
-                        <label for="rvota" class="question"><span class="green_text">3/</span>rvota</label><br>
+                        <label for="rvota" class="question"><span class="green_text">44/</span>Рвота</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="rvota" min="0" step="1" max="2"/>
                     </div>
                     
                     <div>
-                      <p><span class="green_text">5/</span>ag</p>
+                      <p><span class="green_text">45/</span>АГ</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=ag id="ag"/>
@@ -397,77 +392,77 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                     
                     <div class="survey_el">
-                        <label for="sad" class="question"><span class="green_text">3/</span>sad</label><br>
+                        <label for="sad" class="question"><span class="green_text">46/</span>САД</label><br>
                         <input type="text" class="question_answer" id="sad" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="dad" class="question"><span class="green_text">3/</span>dad</label><br>
+                        <label for="dad" class="question"><span class="green_text">47/</span>ДАД</label><br>
                         <input type="text" class="question_answer" id="dad" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="jkt" class="question"><span class="green_text">3/</span>jkt</label><br>
+                        <label for="jkt" class="question"><span class="green_text">48/</span>ЖКТ</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="jkt" min="0" step="1" max="8"/>
                     </div>
                     
                     <div class="survey_el">
-                        <label for="pechen" class="question"><span class="green_text">3/</span>pechen</label><br>
+                        <label for="pechen" class="question"><span class="green_text">49/</span>Печень</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="pechen" min="0" step="2" max="8"/>
                     </div>
                     
                     <div class="survey_el">
-                        <label for="sut_belok_max" class="question"><span class="green_text">3/</span>sut_belok_max</label><br>
+                        <label for="sut_belok_max" class="question"><span class="green_text">50/</span>Максимум суточного белка</label><br>
                         <input type="text" class="question_answer" id="sut_belok_max" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="protenuria_dan" class="question"><span class="green_text">3/</span>protenuria_dan</label><br>
+                        <label for="protenuria_dan" class="question"><span class="green_text">51/</span>Протенурия дан</label><br>
                         <input type="text" class="question_answer" id="protenuria_dan" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="gematury" class="question"><span class="green_text">3/</span>gematury</label><br>
+                        <label for="gematury" class="question"><span class="green_text">52/</span>Гематурия</label><br>
                         <input type="text" class="question_answer" id="gematury" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="gematury_dney" class="question"><span class="green_text">3/</span>gematury_dney</label><br>
+                        <label for="gematury_dney" class="question"><span class="green_text">53/</span>Гематурия дней</label><br>
                         <input type="text" class="question_answer" id="gematury_dney" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="leykocituria" class="question"><span class="green_text">3/</span>leykocituria</label><br>
+                        <label for="leykocituria" class="question"><span class="green_text">54/</span>Лекоцитурия</label><br>
                         <input type="text" class="question_answer" id="leykocituria" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="leykuria_dney" class="question"><span class="green_text">3/</span>leykuria_dney</label><br>
+                        <label for="leykuria_dney" class="question"><span class="green_text">55/</span>Лекоцитурия дней</label><br>
                         <input type="text" class="question_answer" id="leykuria_dney" placeholder="Введите ответ">
                     </div>
                      
                      <div class="survey_el">
-                        <label for="narushenie_mochespuskania" class="question"><span class="green_text">3/</span>narushenie_mochespuskania</label><br>
+                        <label for="narushenie_mochespuskania" class="question"><span class="green_text">56/</span>Нарушение мочеиспускания</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="narushenie_mochespuskania" min="0" step="1" max="2"/>
                      </div>
                      
                     <div class="survey_el">
-                        <label for="olig_anuria_dney" class="question"><span class="green_text">3/</span>olig_anuria_dney</label><br>
+                        <label for="olig_anuria_dney" class="question"><span class="green_text">57/</span>Олиг анурия дней</label><br>
                         <input type="text" class="question_answer" id="olig_anuria_dney" placeholder="Введите ответ">
                     </div>
                     
                     <div class="survey_el">
-                        <label for="ekulizymab" class="question"><span class="green_text">3/</span>ekulizymab</label><br>
+                        <label for="ekulizymab" class="question"><span class="green_text">58/</span>Экулизимаб</label><br>
                         <input type='number' class="question_answer" placeholder="Введите ответ" id="ekulizymab" min="0" step="1" max="7"/>
                     </div>
                     
                     <div class="survey_el">
-                        <label for="dlit_OPP" class="question"><span class="green_text">3/</span>dlit_OPP</label><br>
+                        <label for="dlit_OPP" class="question"><span class="green_text">59/</span>Длительность ОПП</label><br>
                         <input type="text" class="question_answer" id="dlit_OPP" placeholder="Введите ответ">
                     </div>
                     
                     <div>
-                      <p><span class="green_text">5/</span>peritonealny</p>
+                      <p><span class="green_text">60/</span>Перитониалный</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=peritonealny id="peritonealny"/>
@@ -478,7 +473,7 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                     
                     <div>
-                      <p><span class="green_text">5/</span>gemodializ</p>
+                      <p><span class="green_text">61/</span>Гемодиализ</p>
                       <div class="diagnosis_variants">
                         <div class="diagnosis_variants">
                         <select name=gemodializ id="gemodializ"/>
@@ -489,12 +484,12 @@ surveyOpenButton.addEventListener("click", (e)=>{
                     </div>
                     
                     <div class="survey_el">
-                        <label for="giuk5" class="question"><span class="green_text">3/</span>giuk5</label><br>
+                        <label for="giuk5" class="question"><span class="green_text">62/</span>ГИУК-5</label><br>
                         <input type="text" class="question_answer" id="giuk5" placeholder="Введите ответ">
                     </div>
                      
                     <div class="survey_el">
-                        <label for="NT5VPlazme" class="question"><span class="green_text">3/</span>NT5VPlazme</label><br>
+                        <label for="NT5VPlazme" class="question"><span class="green_text">63/</span>НТ5 в плазме</label><br>
                         <input type="text" class="question_answer" id="NT5VPlazme" placeholder="Введите ответ">
                     </div>
                     
